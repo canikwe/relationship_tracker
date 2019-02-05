@@ -6,6 +6,14 @@
 <p>Hobby: <%= @kid.hobby %></p>
 <h4><%= @kid.adult? %></h4>
 
+<!-- Caretaker Information -->
+<h3>Caretakers: </h3>
+<ul>
+  <% @kid.care_takers.each do |c| %>
+    <li><%= link_to c.name, c %></li>
+  <% end %>
+</ul>
+
 <!-- Profile Actions -->
 
 <%= link_to "Edit Profile", edit_kid_path(@kid) %><br>
