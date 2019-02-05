@@ -2,6 +2,7 @@ class Kid < ActiveRecord::Base
   #Associations
   has_many :relationships
   has_many :care_takers, through: :relationships
+  accepts_nested_attributes_for :care_takers
 
   # Validations
   validates :name, presence: { message: " - must be given, please." }

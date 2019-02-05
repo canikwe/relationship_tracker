@@ -32,7 +32,17 @@
     <%= f.select :adult, {"Yes" => true, "No" => false} %><br>
   </div>
 
-<%# Parent Nested Form Pending %>
+  <h3>Caretakers</h3>
+  <%= f.fields_for :care_takers do |care| %>
+    <%= care.label :name%>
+    <%= care.text_field :name %><br>
+
+    <%= care.label :age %>
+    <%= care.number_field :age %><br>
+
+    <%= care.label :job %>
+    <%= care.text_field :job %><br>
+  <% end %>
 
   <p><%= f.submit %></p>
   <% end %>
