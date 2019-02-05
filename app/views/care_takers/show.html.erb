@@ -1,0 +1,14 @@
+<h1>Caretaker Information</h1>
+
+<h3>Name: <%= @care_taker.name %></h3>
+<h3>Age: <%= @care_taker.age %></h3>
+<h3>Job: <%= @care_taker.job %></h3>
+
+<%= link_to  "Edit #{@care_taker.name}", edit_care_taker_path(@care_taker)%>
+<div>
+  <p><%= link_to "Main Page", care_takers_path %></p>
+</div>
+
+<%= form_tag care_taker_path(@care_taker), method:"DELETE" do %>
+<%= submit_tag "Delete Caretaker" %>
+<% end %>

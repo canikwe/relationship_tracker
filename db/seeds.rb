@@ -9,3 +9,8 @@
 Kid.create(name: "Billy Bod", age: 16, hobby: "Ballet", adult: false)
 Kid.create(name: "Mary anne", age: 5, hobby: "Cars", adult: false)
 Kid.create(name: "Heloise", age: 23, hobby: "Coding", adult: true)
+
+CareTaker.create(name: "Joseph", age: 120, job: "Old guy")
+CareTaker.create(name: "Ted", age: 30, job: "Psychopath")
+CareTaker.create(name: "Jim", age: 40, job: "Commedian")
+CareTaker.create(name: "Arnold", age: 40, job: "Actor")

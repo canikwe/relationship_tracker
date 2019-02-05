@@ -1,0 +1,7 @@
+<h1>Caretakers</h1>
+<h3><%= link_to "Create a new caretaker", new_care_taker_path  %></h3>
+<ul>
+<% @care_takers.each do |care_taker| %>
+<li><%= link_to care_taker.name, care_taker_path(care_taker) %></li>
+<% end %>
+</ul>
