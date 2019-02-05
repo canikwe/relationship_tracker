@@ -1,0 +1,39 @@
+<% if @kid.errors.any? %>
+  <div id="error_explanation">
+    <ul>
+      <% @kid.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+
+<% end %>
+
+<div class="more-errors">
+
+<%= form_for @kid do |f|%>
+  <div class="errors">
+    <%= f.label :name %>
+    <%= f.text_field :name %><br>
+  </div>
+
+  <div class="errors">
+    <%= f.label :age %>
+    <%= f.number_field :age %><br>
+  </div>
+
+  <div class="errors">
+    <%= f.label :hobby %>
+    <%= f.text_field :hobby %><br>
+  </div>
+
+  <div class="errors">
+    <%= f.label :adult %>
+    <%= f.select :adult, {"Yes" => true, "No" => false} %><br>
+  </div>
+
+<%# Parent Nested Form Pending %>
+
+  <p><%= f.submit %></p>
+  <% end %>
+</div>

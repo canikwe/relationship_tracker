@@ -1,0 +1,10 @@
+<h1>All The Kids</h1>
+
+<ul>
+  <% @kids.order(:name).each do |k| %>
+    <li><%= link_to k.name, k %></li><br>
+  <% end %>
+</ul>
+
+
+<%= link_to "Create New Kid", new_kid_path %>

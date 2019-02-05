@@ -1,0 +1,17 @@
+<h1><%= @kid.name %> Profile Page</h1>
+
+<!-- Kid's Profile -->
+<p>Name: <%= @kid.name %></p>
+<p>Age: <%= @kid.age %></p>
+<p>Hobby: <%= @kid.hobby %></p>
+<h4><%= @kid.adult? %></h4>
+
+<!-- Profile Actions -->
+
+<%= link_to "Edit Profile", edit_kid_path(@kid) %><br>
+<%= link_to "Index Page", kids_path %>
+<%= form_tag kid_path(@kid), method: "delete" do %>
+  <%= submit_tag "Delete Profile" %>
+<% end %>
+
+<!-- Parent's Info -->
