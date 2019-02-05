@@ -3,6 +3,14 @@
 <h3>Name: <%= @care_taker.name %></h3>
 <h3>Age: <%= @care_taker.age %></h3>
 <h3>Job: <%= @care_taker.job %></h3>
+<h3>Kids cared for:</h3>
+<p>
+  <ul>
+    <% @care_taker.kids.each do |kid| %>
+    <li><%= link_to kid.name, kid_path(kid) %></li>
+    <% end %>
+  </ul>
+</p>
 
 <%= link_to  "Edit #{@care_taker.name}", edit_care_taker_path(@care_taker)%>
 <div>

@@ -24,6 +24,17 @@
 <%= f.text_field :age %><br>
 <%= f.label :job %>
 <%= f.text_field :job %><br>
+<%= f.fields_for :kids do |kid| %><br>
+<h3>Kid cared for:</h3>
+<%= kid.label :name %>
+<%= kid.text_field :name %><br>
+<%= kid.label :age %>
+<%= kid.text_field :age %><br>
+<%= kid.label :hobby %>
+<%= kid.text_field :hobby %><br>
+<%= kid.label :adult %>
+<%= kid.select :adult, {"Yes" => true, "No" => false} %><br>
+<% end %>
 <%= f.submit %><br>
 <% end %>
 </div>

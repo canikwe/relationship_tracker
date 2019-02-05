@@ -10,6 +10,7 @@ class CareTakersController < ApplicationController
 
   def new
     @care_taker = CareTaker.new
+    @kid = @care_taker.kids.build(name: "name")
   end
 
   def create
@@ -45,7 +46,7 @@ class CareTakersController < ApplicationController
   end
 
   def get_params
-    params.require(:care_taker).permit(:name, :age, :job)
+    params.require(:care_taker).permit(:name, :age, :job, kids_attributes: [:name, :age, :hobby, :adult])
   end
 
 end
