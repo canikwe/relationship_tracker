@@ -1,4 +1,8 @@
 class Kid < ActiveRecord::Base
+  #Associations
+  has_many :relationships
+  has_many :care_takers, through: :relationships
+
   # Validations
   validates :name, presence: { message: " - must be given, please." }
   validates :age, presence: { message: " - must be given, please."}

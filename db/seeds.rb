@@ -6,11 +6,15 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Kid.create(name: "Billy Bod", age: 16, hobby: "Ballet", adult: false)
-Kid.create(name: "Mary anne", age: 5, hobby: "Cars", adult: false)
-Kid.create(name: "Heloise", age: 23, hobby: "Coding", adult: true)
+k = Kid.create(name: "Billy Bod", age: 16, hobby: "Ballet", adult: false)
+k1 = Kid.create(name: "Mary anne", age: 5, hobby: "Cars", adult: false)
+k2 = Kid.create(name: "Heloise", age: 23, hobby: "Coding", adult: true)
 
-CareTaker.create(name: "Joseph", age: 120, job: "Old guy")
-CareTaker.create(name: "Ted", age: 30, job: "Psychopath")
-CareTaker.create(name: "Jim", age: 40, job: "Commedian")
-CareTaker.create(name: "Arnold", age: 40, job: "Actor")
+c = CareTaker.create(name: "Joseph", age: 120, job: "Old guy")
+c1 = CareTaker.create(name: "Ted", age: 30, job: "Psychopath")
+c2 = CareTaker.create(name: "Jim", age: 40, job: "Commedian")
+c3 = CareTaker.create(name: "Arnold", age: 40, job: "Actor")
+
+Relationship.create(care_taker: c, kid: k, status: 6)
+Relationship.create(care_taker: c2, kid: k1, status: 4)
+Relationship.create(care_taker: c2, kid: k2, status: 10)
