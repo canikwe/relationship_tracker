@@ -1,0 +1,29 @@
+<h1>New Caretaker</h1>
+
+<% if @care_taker.errors.any? %>
+  <div class="error_explanation">
+    <h2>
+      <%= pluralize(@care_taker.errors.count, "error") %>
+      prohibited this article from being saved:
+    </h2>
+
+    <ul>
+<% @care_taker.errors.full_messages.each do |msg| %>
+  <li><%= msg %></li>
+<% end %>
+</ul>
+
+</div>
+<% end %>
+
+<div class="form">
+<%= form_for @care_taker do |f| %><br>
+<%= f.label :name %>
+<%= f.text_field :name %><br>
+<%= f.label :age %>
+<%= f.text_field :age %><br>
+<%= f.label :job %>
+<%= f.text_field :job %><br>
+<%= f.submit %><br>
+<% end %>
+</div>
